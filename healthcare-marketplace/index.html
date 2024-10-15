@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Data Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Healthcare Data Marketplace</h2>
+        
+        <!-- Form to Register Patient Data -->
+        <form id="registerForm">
+            <label for="dataHash">Medical Data Hash (IPFS or other):</label>
+            <input type="text" id="dataHash" placeholder="Enter data hash" required>
+            <button type="submit">Register Data</button>
+        </form>
+
+        <!-- Form to Grant Access to Researcher -->
+        <form id="grantAccessForm">
+            <label for="researcherAddress">Researcher Address:</label>
+            <input type="text" id="researcherAddress" placeholder="Enter researcher address" required>
+            <button type="submit">Grant Access</button>
+        </form>
+
+        <!-- Form to Revoke Access from Researcher -->
+        <form id="revokeAccessForm">
+            <label for="revokeAddress">Researcher Address to Revoke:</label>
+            <input type="text" id="revokeAddress" placeholder="Enter researcher address" required>
+            <button type="submit">Revoke Access</button>
+        </form>
+
+        <!-- Display result of transactions -->
+        <div id="result"></div>
+    </div>
+    
+    <footer>
+        Powered by Ethereum and IPFS
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
